@@ -16,6 +16,7 @@ $   git init
 $   git remote add origin https://github.com/FreeParkingSlotsUTA/FPS-App.git
 ```
 ### Now you have working GIT folder. Next you need to learn how to push and pull updates:
+
 ### Pull:
 ```sh
 $   git pull origin master
