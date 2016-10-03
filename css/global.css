@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Zurich_Condensed_BT;
+    src: url('../fonts/Zurich__Condensed_BT.ttf');
+}
+
+* {
+    font-family: Zurich_Condensed_BT;
+    letter-spacing: 1px;
+}
+
+html, body {
+    font-size: 50px;
+    height: 100%;
+    font-family: ‘Lucida Console’, Monaco, monospace;
+    color:white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: url(../img/uta.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-shadow: -0.5px -0.5px 0 #b3d1ff,
+    0.5px -0.5px 0 #b3d1ff,
+    -0.5px 0.5px 0 #b3d1ff,
+    0.5px 0.5px 0 #b3d1ff;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+.absolute-center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px){
+    body{
+        background-size: cover;
+    }
+}
