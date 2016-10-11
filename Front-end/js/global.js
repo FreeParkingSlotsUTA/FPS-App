@@ -1,3 +1,5 @@
+var windowSize;
+
 function updateClock() {
     var currentTime = new Date();
     var currentHours = currentTime.getHours();
@@ -49,11 +51,27 @@ function updateClock() {
             break;
     }
 
-    var currentTimeString = currentDay + "-" + currentMonth + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
+    if(currentHours < 10)
+    {
+        currentHours = "0" + currentHours;
+    }
+
+    var currentTimeString = currentTime.getDate() + "-" + currentMonth + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
 
    	$("#clock").html('('+currentTimeString+')');
 }
 
 $(document).ready(function () {
     setInterval('updateClock()', 1000);
+});
+
+$(document).ready(function(){
+    updateClock();
+    windowSize = $( window ).height();
+    console.log(windowSize);
+
+    if(windowSize > 535)
+    {
+        console.log(windowSize);
+    }
 });

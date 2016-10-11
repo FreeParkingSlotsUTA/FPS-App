@@ -36,26 +36,32 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 768px) {
-    body {
-        background-size: cover;
-    }
-}
-
 #navbar-icon {
     position: relative;
     top: -4px;
     border-radius: 2px;
 }
+
 span.line {
-  white-space: nowrap;
+    white-space: nowrap;
+}
+
+.spacing {
+    margin-bottom: 40px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
 }
 
 @media (max-width: 768px) {
     body {
         background-size: cover;
     }
-    h1{
+    h1 {
         font-size: 25px;
     }
 }

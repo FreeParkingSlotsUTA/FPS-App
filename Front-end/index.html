@@ -12,63 +12,123 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/global.css">
     <script src="js/angular.min.js"></script>
-    
+
 
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
+    <div id="wrap">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href="#"><img height="28px" width="26px" src="img/icon.jpg" id="navbar-icon"></a>
+                    <a class="navbar-brand" href="#"><img height="28px" width="26px" src="img/icon.jpg" id="navbar-icon"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Contact Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">English</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Finish</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students & stuff <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Contact Us</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">English</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Finish</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students & stuff <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="text-center" style="padding:0px 15px 15px 15px">
+                    <img src="img/logo.jpg" style="max-width:100%; max-height:100%;">
+                </div>
+            </div>
+            <div class="row text-center text-uppercase spacing">
+                <h1>
+                    <span class="line">Free parking spaces</span>
+                    <span class="line" id="clock"></span>
+                </h1>
+            </div>
+            <div class="row" style="z-index:1000">
+                <div class="span5">
+                    <table class="table table-responsive table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Area</th>
+                                <th>Status</th>
+                                <th>#Empty</th>
+                                <th>Map</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Parking 1</td>
+                                <td><span class="label label-success">Available</span>
+                                    <td>0</td>
+                                    <td><span class="glyphicon glyphicon-map-marker"></span></td>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Parking 2</td>
+                                <td><span class="label label-danger">Inactive</span></td>
+                                <td>0</td>
+                                <td><span class="glyphicon glyphicon-map-marker"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td>Parking 3</td>
+                                <td><span class="label label-danger">Inactive</span></td>
+                                <td>0</td>
+                                <td><span class="glyphicon glyphicon-map-marker"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td>Parking 4</td>
+                                <td><span class="label label-danger">Inactive</span></td>
+                                <td>0</td>
+                                <td><span class="glyphicon glyphicon-map-marker"></span></td>
+
+                            </tr>
+                            <tr>
+                                <td>Parking 5</td>
+                                <td><span class="label label-danger">Inactive</span></td>
+                                <td>0</td>
+                                <td><span class="glyphicon glyphicon-map-marker"></span></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="text-center" style="padding:0px 15px 15px 15px">
-                <img src="img/logo.jpg" style="max-width:100%; max-height:100%;">
-            </div>
-        </div>
-        <div class="row text-center text-uppercase">
-            <h1>
-                <span class="line">Free parking spaces</span>
-                <span class="line" id="clock"></span>
-            </h1>
+        <div id="push"></div>
+    </div>
+    <div class="container no-padding">
+        <div id="footer">
         </div>
     </div>
+
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/bootstrap.min.js"></script>
