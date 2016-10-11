@@ -47,8 +47,15 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
     top: -4px;
     border-radius: 2px;
 }
-@media (min-width: 768px) and (max-width: 1000px) {
-   .collapse {
-       display: none !important;
-   }
+span.line {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+    h1{
+        font-size: 25px;
+    }
 }
