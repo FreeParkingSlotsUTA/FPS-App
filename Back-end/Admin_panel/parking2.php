@@ -10,9 +10,10 @@ $db_parkingslots=pg_fetch_row($ret,1);
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Parking1</title>
+<title>Parking2</title>
 </head>
 <body>
+<h2 align="center">Parking2</h2>
 <style type="text/css">
 .mod{
 	background:#00BFFF;

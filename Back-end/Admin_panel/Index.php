@@ -53,7 +53,9 @@ if(!$_SESSION['islogin']){
 
 
 
-    <div class="container-fluid content">
+    
+    
+     <div class="container-fluid content">
         <div class="row-fluid">
             <div class="span2 content-left">
                 <div class="accordion">
@@ -65,25 +67,30 @@ if(!$_SESSION['islogin']){
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
                             <a href="parking1.php" target="show"><div class="accordion-inner">
-                                <img class="left-icon-child" src="./images/32/4962_sitemap.png" /><span class="left-body"> Parking 1</span>
-                            </div></a>
+                                <img class="left-icon-child" src="./images/32/4962_sitemap.png" /><span class="left-body"> Parking1</span>
+                            </div>
                             <a href="parking2.php" target="show"><div class="accordion-inner">
-                                <img class="left-icon-child" src="./images/32/4957_customers.png" /><span class="left-body"> Parking 2</span>
-                            </div></a>
+                                <img class="left-icon-child" src="./images/32/4957_customers.png" /><span class="left-body"> Parking2</span>
+
                             </div>
                             <a href="parking3.php" target="show"><div class="accordion-inner">
-                                <img class="left-icon-child" src="./images/32/4992_user.png" /><span class="left-body"> Parking 3</span>
-                        	</div></a>
+                                <img class="left-icon-child" src="./images/32/4992_user.png" /><span class="left-body"> Parking3</span>
+
+                            </div>
+                        
+                        </div>
                     </div>
                 </div>
 
             </div>
 
             <div class="span10 content-right">
-            <iframe src="/xampp/Admin_panel/Index2.php" class="iframe" name="show"></iframe>   
+                <iframe src="Index2.php" class="iframe" name="show"></iframe>
             </div>
         </div>
     </div>
+    
+    
     <div class="clearfix"></div>
     <div class="foot"></div>
     <script src="./scripts/jquery-1.9.1.min.js"></script>

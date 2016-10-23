@@ -13,6 +13,7 @@ $db_parkingslots=pg_fetch_row($ret,0);
 <title>Parking1</title>
 </head>
 <body>
+<h2 align="center">Parking1</h2>
 <style type="text/css">
 .mod{
 	background:#00BFFF;
