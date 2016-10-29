@@ -62,19 +62,19 @@ if(!$_SESSION['islogin']){
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                <img class="left-icon" src="./images/32/5026_settings.png" /><span class="left-title">Parking Slots</span>
+                                <img class="left-icon" src="./images/32/parkingslots.png" /><span class="left-title">Parking Slots</span>
                             </a>
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
                             <a href="parking1.php" target="show"><div class="accordion-inner">
-                                <img class="left-icon-child" src="./images/32/4962_sitemap.png" /><span class="left-body"> Parking1</span>
+                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking1</span>
                             </div>
                             <a href="parking2.php" target="show"><div class="accordion-inner">
-                                <img class="left-icon-child" src="./images/32/4957_customers.png" /><span class="left-body"> Parking2</span>
+                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking2</span>
 
                             </div>
                             <a href="parking3.php" target="show"><div class="accordion-inner">
-                                <img class="left-icon-child" src="./images/32/4992_user.png" /><span class="left-body"> Parking3</span>
+                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking3</span>
 
                             </div>
                         

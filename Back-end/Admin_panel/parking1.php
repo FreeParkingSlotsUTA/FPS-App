@@ -12,11 +12,16 @@ $db_parkingslots=pg_fetch_row($ret,0);
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Parking1</title>
 </head>
-<body>
-<h2 align="center">Parking1</h2>
+<body style="background-image: url('./images/bg.jpg'); background-size:cover">
+<h2 align="center" style="font-family: verdana,arial,sans-serif;">Parking1</h2>
 <style type="text/css">
 .mod{
 	background:#00BFFF;
+	border: 1px solid black; 
+	padding: 7px 0px; 
+	border-radius: 3px; 
+	padding-left:5px;
+	color:white;
 }
 table.imagetable {
 	font-family: verdana,arial,sans-serif;
@@ -43,7 +48,8 @@ table.imagetable td {
 	text-align:center;
 }
 .white_content {
- display: none;
+ font-family: verdana,arial,sans-serif;
+	display: none;
  position: absolute;
  top: 25%;
  left: 25%;
@@ -118,47 +124,47 @@ function hide(tag){
 		</tr>
 		<tr>
 			<th></th>
-			<th><input value="Modify" style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light')"></th>
+			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light')"></th>
 				<div id="light" class="white_content">
-	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light')"> CLOSE</a></div>
+	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1entrance.php' method="post"> 
 			      					Number of Entrance:
-			       					<input name="entrance1new" placeholder="input new data" type="text" style="background-color:#B0C4DE">
-								<input value="CONFIRM" type="submit" class="mod">
+			       					<input name="entrance1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+								<input value="CONFIRM " type="submit" class="mod">
 							</form>							
 	     				</div>
 				</div>
-			<th><input value="Modify" style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light2')"></th>
+			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light2')"></th>
 				<div id="light2" class="white_content">
-	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light2')"> CLOSE</a></div>
+	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light2')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1exit.php' method="post"> 
 			      					Number of Exit:
-			       					<input name="exit1new" placeholder="input new data" type="text" style="background-color:#B0C4DE">
-								<input value="CONFIRM" type="submit" class="mod">
+			       					<input name="exit1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
 				</div>
-			<th><input value="Modify" style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light3')"></th>
+			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light3')"></th>
 				<div id="light3" class="white_content">
-	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light3')"> CLOSE</a></div>
+	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light3')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1total.php' method="post"> 
 			      					Total slots:
-			       					<input name="total1new" placeholder="input new data" type="text" style="background-color:#B0C4DE">
-								<input value="CONFIRM" type="submit" class="mod">
+			       					<input name="total1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
 				</div>
-			<th><input value="Modify" style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light4')"></th>
+			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light4')"></th>
 				<div id="light4" class="white_content">
-	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light4')"> CLOSE</a></div>
+	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light4')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1free.php' method="post"> 
 			      					Free Slots:
-			       					<input name="free1new" placeholder="input new data" type="text" style="background-color:#B0C4DE">
-								<input value="CONFIRM" type="submit" class="mod">
+			       					<input name="free1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
 				</div>
