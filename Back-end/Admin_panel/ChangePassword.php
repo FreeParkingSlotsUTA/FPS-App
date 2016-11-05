@@ -2,14 +2,16 @@
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 $passwdold=md5($_POST['passwdold']);
 $passwdnew=md5($_POST['passwdnew']);
+$passwdnewagain=md5($_POST['passwdnewagain']);
 $conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
-$ret=pg_query($conn, "SELECT * FROM Adminpanel");
+$ret=pg_query($conn, "SELECT * FROM passwd");
 $db_usernamepasswd=pg_fetch_row($ret,0);
 
 if($passwdold==$db_usernamepasswd[1]){
-    if($passwdnew!=md5('')){
+    if(($passwdnew!=md5(''))&&($passwdnewagain!=md5(''))){
+    	if($passwdnew==$passwdnewagain){
     	$sql=<<<EOF
-    UPDATE Adminpanel SET Password = '$passwdnew';
+    UPDATE passwd SET passwd = '$passwdnew';
 EOF;
     	$ret = pg_query($conn, $sql);
     	if(!$ret){
@@ -18,6 +20,10 @@ EOF;
     	} else {
     		echo "<script language=javascript>alert('Password has updated successfully!');history.back();</script>";
     	}
+    	}else{
+    	echo "<script language=javascript>alert('The two passwords you entered are not same!');history.back();</script>";
+    	}
+    
     }else{
     	echo "<script language=javascript>alert('The new password should not be empty!');history.back();</script>";
     }

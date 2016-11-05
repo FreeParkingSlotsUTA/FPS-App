@@ -17,12 +17,16 @@ $db_parkingslots=pg_fetch_row($ret,1);
 <style type="text/css">
 .mod{
 	background:#00BFFF;
-	border: 1px solid black; 
+	border: 2px solid black; 
 	padding: 7px 0px; 
 	border-radius: 3px; 
 	padding-left:5px;
 	color:white;
+	font-family: verdana,arial,sans-serif;
 }
+.mod:hover{
+	border: 2px solid red;
+	}
 table.imagetable {
 	font-family: verdana,arial,sans-serif;
 	font-size:15px;
@@ -171,5 +175,6 @@ function hide(tag){
 	</table>
 
 	<div id="fade" class="black_overlay"></div>
+	<h4 align="right" style="font-family: verdana,arial,sans-serif;"><a href="Index2.php">>>BACK</a></h4>
 </body>
 </html>
