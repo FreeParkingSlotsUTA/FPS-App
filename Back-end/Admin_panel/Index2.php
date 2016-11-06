@@ -8,20 +8,6 @@
 	<h2 align="center" style="font-family: verdana,arial,sans-serif;">Welcome to the administrator panel of Free Parking Slots!</h2>	
 	<h3 id="time" align="center" style="font-family: verdana,arial,sans-serif;"></h3>
 	<style type="text/css">
-	.mod{
-	background:url('./images/32/button_orange.jpg');
-	background-size:cover;
-	border: 1px solid black; 
-	padding: 22px 65px; 
-	border-radius: 20px; 
-	padding-left:65px;
-	color:black;
-	font-size:35px;
-	font-family: verdana,arial,sans-serif;
-	}
-	.mod:hover{
-	border: 5px solid red;
-	}
 	</style>
 	<script>
          function setTime(){
@@ -51,17 +37,13 @@
          }
 	</script>
 	<table align="center" style="font-family: verdana,arial,sans-serif;">
-		
-		<tr>
-		<td><a href="parking1.php"><div class="mod">Parking1</div></a></td>
-		</tr>
-		<tr>
-		<td><a href="parking2.php"><div class="mod">Parking2</div></a></td>
-		</tr>
-		<tr>
-		<td><a href="parking3.php"><div class="mod">Parking3</div></a></td>
-		</tr>
-	</table>
+	<tr>
+		<th>
+			<img src="./images/parkingslot.jpg" height="auto";max-width="100%";/>
+		</th>
+	</tr>
+	
+	
 	
 </body>
 </html>

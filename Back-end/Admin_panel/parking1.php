@@ -28,6 +28,12 @@ $db_parkingslots=pg_fetch_row($ret,0);
 .mod:hover{
 	border: 2px solid red;
 	}
+.bk{
+	border: 2px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;
+}
+.bk1{
+	border: 2px solid red; padding: 7px 0px; border-radius: 3px; padding-left:5px;
+}
 table.imagetable {
 	font-family: verdana,arial,sans-serif;
 	font-size:15px;
@@ -135,7 +141,7 @@ function hide(tag){
 	      				<div class="con">
 	      					<form action='parking1entrance.php' method="post"> 
 			      					Number of Entrance:
-			       					<input name="entrance1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+			       					<input name="entrance1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>							
 	     				</div>
@@ -146,7 +152,7 @@ function hide(tag){
 	      				<div class="con">
 	      					<form action='parking1exit.php' method="post"> 
 			      					Number of Exit:
-			       					<input name="exit1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+			       					<input name="exit1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
@@ -157,7 +163,7 @@ function hide(tag){
 	      				<div class="con">
 	      					<form action='parking1total.php' method="post"> 
 			      					Total slots:
-			       					<input name="total1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+			       					<input name="total1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
@@ -168,7 +174,7 @@ function hide(tag){
 	      				<div class="con">
 	      					<form action='parking1free.php' method="post"> 
 			      					Free Slots:
-			       					<input name="free1new" placeholder="input new data" type="text" style="border: 1px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;">
+			       					<input name="free1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
@@ -177,6 +183,6 @@ function hide(tag){
 	</table>
 
 	<div id="fade" class="black_overlay"></div>
-	<h4 align="right" style="font-family: verdana,arial,sans-serif;"><a href="Index2.php">>>BACK</a></h4>
+	
 </body>
 </html>

@@ -31,7 +31,7 @@ if(!$_SESSION['islogin']){
 
             </li>
             <li>
-                <img src="./images/32/200.png" />&nbsp;&nbsp;<a class="loginout" href="/xampp/Admin_panel/login.html" <?php session_unset();session_destroy();?>>LOGOUT</a>
+                <a class="loginout" href="/xampp/Admin_panel/login.html" <?php session_unset();session_destroy();?>><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
             </li>
 
         </ul>
