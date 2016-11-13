@@ -1,5 +1,27 @@
 var windowSize;
 
+function refresh() {
+    setTimeout(function () {
+        windowHeight = $(window).height();
+        windowWidth = $(window).width();
+        console.log(windowHeight);
+        console.log(windowWidth);
+
+        if (windowWidth < 710) {
+            $("#responsivePic").attr("src", "/img/narrowMap.png");
+            $('#responsivePic').width(windowWidth);
+            $('#responsivePic').height(windowSize);
+            console.log("maziau");
+        }
+        else {
+            $("#responsivePic").attr("src", "/img/wideMap.png");
+            $('#responsivePic').width(windowWidth);
+            $('#responsivePic').height(windowSize);
+            console.log("daugiau");
+        }
+    }, 20);
+}
+
 function updateClock() {
     var currentTime = new Date();
     var currentHours = currentTime.getHours();
@@ -84,7 +106,7 @@ $(document).ready(function(){
         $('#responsivePic').height(windowSize);
         console.log("daugiau");
     }
-    $('#mapView').click(function () {
+    $('.glyphicon-map-marker, #mapView').click(function () {
         setTimeout(function () {
             windowHeight = $(window).height();
             windowWidth = $(window).width();

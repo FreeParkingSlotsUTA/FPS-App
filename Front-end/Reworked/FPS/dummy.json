@@ -1,0 +1,22 @@
+[
+  {
+    "parkID": "1",
+    "slots": "5"
+  },
+  {
+    "parkID": "2",
+    "slots": "38"
+  },
+  {
+    "parkID": "3",
+    "slots": "55"
+  },
+  {
+    "parkID": "4",
+    "slots": "0"
+  },
+  {
+    "parkID": "5",
+    "slots": "0"
+  }
+]

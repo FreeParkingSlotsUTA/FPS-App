@@ -22,42 +22,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Parking 1</td>
-                        <td><span class="label label-success">Available</span>
-                            <td>0</td>
-                            <td><span class="glyphicon glyphicon-map-marker"></span></td>
+                    <tr ng-repeat="park in parking | orderBy: 'ParkID' ">
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Parking 2</td>
-                        <td><span class="label label-danger">Inactive</span></td>
-                        <td>0</td>
-                        <td><span class="glyphicon glyphicon-map-marker"></span></td>
+                        <td>Parking {{park.parkID}}</td>
+                        
+                        <td ng-if="park.slots >= 1"><span class="label label-success">Available</span></td>
+                        <td ng-if="park.slots <= 0"><span class="label label-danger">Unavailable</span></td>
 
-                    </tr>
-                    <tr>
-                        <td>Parking 3</td>
-                        <td><span class="label label-danger">Inactive</span></td>
-                        <td>0</td>
-                        <td><span class="glyphicon glyphicon-map-marker"></span></td>
+                        <td>{{park.slots}}</td>
 
+                        <td><a onclick="refresh()" href="#mapView"><span class="glyphicon glyphicon-map-marker"></span></a></td>
+                        
                     </tr>
-                    <tr>
-                        <td>Parking 4</td>
-                        <td><span class="label label-danger">Inactive</span></td>
-                        <td>0</td>
-                        <td><span class="glyphicon glyphicon-map-marker"></span></td>
 
-                    </tr>
-                    <tr>
-                        <td>Parking 5</td>
-                        <td><span class="label label-danger">Inactive</span></td>
-                        <td>0</td>
-                        <td><span class="glyphicon glyphicon-map-marker"></span></td>
-
-                    </tr>
                 </tbody>
             </table>
         </div>
