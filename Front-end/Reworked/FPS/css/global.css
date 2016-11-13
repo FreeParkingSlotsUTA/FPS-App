@@ -1,0 +1,131 @@
+@font-face {
+    font-family: Zurich_Condensed_BT;
+    src: url('../fonts/Zurich__Condensed_BT.ttf');
+}
+
+* {
+    font-family: Zurich_Condensed_BT;
+    letter-spacing: 1px;
+}
+
+html, body {
+    font-size: 130%;
+    height: 100%;
+    font-family: ‘Lucida Console’, Monaco, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: url(../img/background.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-shadow: -0.5px -0.5px 0 #b3d1ff, 0.5px -0.5px 0 #b3d1ff, -0.5px 0.5px 0 #b3d1ff, 0.5px 0.5px 0 #b3d1ff;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#navbar-icon {
+    position: relative;
+    top: -4px;
+    border-radius: 2px;
+}
+
+span.line {
+    white-space: nowrap;
+}
+
+.spacing {
+    margin-bottom: 40px;
+}
+
+.middle-logo-inline {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.middle-logo {
+    padding: 0px 15px 15px 15px;
+}
+
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -279px;
+    padding: 0 0 279px;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+#footer {
+    height: 279px;
+    background-image: url('../img/footerBackground.jpg');
+    border-bottom: 40px solid #0e304b;
+    text-shadow: none;
+    color:white;
+     padding: 3rem 1rem 1rem 1rem;
+}
+
+@media (max-width: 991px) {   
+    #footer{
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+        h1 {
+        font-size: 25px;
+    }
+    
+    #footer{
+        font-size: 15px;
+    }
+
+    #footer img{
+        width: 18%;
+    }
+
+    #footer-links{
+        clear: both;
+        padding:1rem;
+        text-align: center;
+    }
+
+    #second-box{
+        text-align: right;
+    }
+
+}
+
+
+@media (max-width: 464px) {
+    html, body {
+         font-size: 99%;
+    }
+
+    #footer-links{
+        padding:2rem 1rem 1rem 1rem;
+    }
+    #footer img{
+        width: 28%;
+    }
+}

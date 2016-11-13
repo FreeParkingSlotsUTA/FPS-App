@@ -1,0 +1,66 @@
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\ApplicationInsights.config
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\csc.exe
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\vbc.exe
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\FPS.dll.config
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\FPS.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\FPS.pdb
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.Web.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.Web.xml
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\obj\Debug\FPS.csprojResolveAssemblyReference.cache
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\obj\Debug\FPS.dll
+C:\Users\Rytis\documents\visual studio 2015\Projects\FPS\FPS\obj\Debug\FPS.pdb
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\ApplicationInsights.config
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\csc.exe
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\vbc.exe
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\FPS.dll.config
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\FPS.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\FPS.pdb
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.Web.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.Web.xml
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\obj\Debug\FPS.csprojResolveAssemblyReference.cache
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\obj\Debug\FPS.dll
+C:\Users\Rytis\Desktop\UTA\FPS\Front-end\Reworked\FPS\obj\Debug\FPS.pdb

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html ng-app="scotchApp">
+
+<head>
+
+    <title>FPS</title>
+    <meta name="description" content="Free parking spaces in UTA">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    
+</head>
+
+<body ng-controller="mainController">
+    <div id="wrap">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                    <a class="navbar-brand" href="#home"><img height="28px" width="26px" src="img/icon.jpg" id="navbar-icon"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#aboutUs">Contact Us</a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">English</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="">Finnish</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#home">List View</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li id="mapView"><a href="#mapView">Map View</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div ng-view></div>
+
+        <div id="push"></div>
+    </div>
+    <div class="container no-padding">
+        <div id="footer">
+            <div class="col-xs-6 col-sm-3 col-md-5 col-lg-5 padding-footer">
+                <p>Tampereen yliopisto<br> 03 355 111<br> kirjaamo @ uta.fi</p>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-4 padding-footer" id="second-box">
+                <p>Postiosoite 33014<br> Tampereen yliopisto</p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 padding-footer" id="footer-links">
+                <a href="http://www.uta.fi/toihin/hrs4r.html"><img src="img/1.png"></a>
+                <a href="http://www.uta.fi/laatujarjestelma/"><img src="img/2.png""></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
