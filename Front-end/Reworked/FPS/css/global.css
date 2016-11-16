@@ -80,6 +80,11 @@ span.line {
      padding: 3rem 1rem 1rem 1rem;
 }
 
+p{
+    font-size: 18px;
+    line-height: 20px;
+}
+
 @media (max-width: 991px) {   
     #footer{
         font-size: 17px;
