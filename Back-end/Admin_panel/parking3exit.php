@@ -6,7 +6,7 @@ $ret=pg_query($conn, "SELECT * FROM parkingslots");
 
 $exit3new=$_POST['exit3new'];
 
-if($exit3new!=''){
+if(is_numeric($exit3new)==true){
 	$sql=<<<EOF
     UPDATE parkingslots SET exit = '$exit3new' where parkingid=3;
 EOF;
@@ -18,7 +18,7 @@ EOF;
 		echo '<script language=javascript>alert("Data has updated successfully!");location.href="parking3.php";</script>';
 	}
 }else{
-	echo "<script language=javascript>alert('The new data should not be empty!');history.back();</script>";
+	echo "<script language=javascript>alert('Please input valid data!');history.back();</script>";
 }
 
 

@@ -28,7 +28,7 @@ $db_parkingslots=pg_fetch_row($ret,2);
 	border: 2px solid red;
 }
 .bk{
-	border: 2px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px;
+	border: 2px solid black; padding: 7px 0px; border-radius: 3px; padding-left:5px; background-color: #FFFFF0;
 }
 .bk1{
 	border: 2px solid red; padding: 7px 0px; border-radius: 3px; padding-left:5px;
@@ -64,8 +64,8 @@ table.imagetable td {
  left: 25%;
  width: 50%;
  padding: 6px 16px;
- border: 12px solid #D6E9F1;
- background-color: white;
+ border: 12px solid #AFEEEE;
+ background-color: #FFFFF0;
  z-index:1002;
  overflow: auto;
 }

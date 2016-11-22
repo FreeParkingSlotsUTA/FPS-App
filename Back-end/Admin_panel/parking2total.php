@@ -7,7 +7,7 @@ $ret=pg_query($conn, "SELECT * FROM parkingslots");
 $total2new=$_POST['total2new'];
 
 
-if($total2new!=''){
+if(is_numeric($total2new)==true){
 	$sql=<<<EOF
     UPDATE parkingslots SET totalslots = '$total2new' where parkingid=2;
 EOF;
@@ -19,7 +19,7 @@ EOF;
 		echo '<script language=javascript>alert("Data has updated successfully!");location.href="parking2.php";</script>';
 	}
 }else{
-	echo "<script language=javascript>alert('The new data should not be empty!');history.back();</script>";
+	echo "<script language=javascript>alert('Please input valid data!');history.back();</script>";
 }
 
 

@@ -66,14 +66,14 @@ if(!$_SESSION['islogin']){
                             </a>
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
-                            <a href="parking1.php" target="show"><div class="accordion-inner">
+                            <div class="accordion-inner"><a href="parking1.php" target="show">
                                 <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking1</span>
                             </div>
-                            <a href="parking2.php" target="show"><div class="accordion-inner">
+                            <div class="accordion-inner"><a href="parking2.php" target="show">
                                 <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking2</span>
-
                             </div>
-                            <a href="parking3.php" target="show"><div class="accordion-inner">
+                           
+                            <div class="accordion-inner"> <a href="parking3.php" target="show">
                                 <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking3</span>
 
                             </div>
@@ -89,15 +89,11 @@ if(!$_SESSION['islogin']){
             </div>
         </div>
     </div>
-    
-    
-    <div class="clearfix"></div>
-    <div class="foot"></div>
+
     <script src="./scripts/jquery-1.9.1.min.js"></script>
     <script src="./bootstrap2.3.2/js/bootstrap.min.js"></script>
     <script src="./scripts/Index.js"></script>
-	<div style="text-align:center;">
-</div>
+	
 
 </body>
 </html>
