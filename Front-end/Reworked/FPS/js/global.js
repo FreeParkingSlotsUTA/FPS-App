@@ -10,13 +10,13 @@ function refresh() {
         if (windowWidth < 710) {
             $("#responsivePic").attr("src", "/img/narrowMap.png");
             $('#responsivePic').width(windowWidth);
-            $('#responsivePic').height(windowSize);
+            $('#responsivePic').height(windowHeight);
             console.log("maziau");
         }
         else {
             $("#responsivePic").attr("src", "/img/wideMap.png");
             $('#responsivePic').width(windowWidth);
-            $('#responsivePic').height(windowSize);
+            $('#responsivePic').height(windowHeight);
             console.log("daugiau");
         }
     }, 20);
@@ -97,13 +97,13 @@ $(document).ready(function(){
     if (windowWidth < 710) {
         $("#responsivePic").attr("src", "/img/narrowMap.png");
         $('#responsivePic').width(windowWidth);
-        $('#responsivePic').height(windowSize);
+        $('#responsivePic').height(windowHeight);
         console.log("maziau");
     }
     else {
         $("#responsivePic").attr("src", "/img/wideMap.png");
         $('#responsivePic').width(windowWidth);
-        $('#responsivePic').height(windowSize);
+        $('#responsivePic').height(windowHeight);
         console.log("daugiau");
     }
     $('.glyphicon-map-marker, #mapView').click(function () {
@@ -116,13 +116,13 @@ $(document).ready(function(){
             if (windowWidth < 710) {
                 $("#responsivePic").attr("src", "/img/narrowMap.png");
                 $('#responsivePic').width(windowWidth);
-                $('#responsivePic').height(windowSize);
+                $('#responsivePic').height(windowHeight);
                 console.log("maziau");
             }
             else {
                 $("#responsivePic").attr("src", "/img/wideMap.png");
                 $('#responsivePic').width(windowWidth);
-                $('#responsivePic').height(windowSize);
+                $('#responsivePic').height(windowHeight);
                 console.log("daugiau");
             }
         }, 20);

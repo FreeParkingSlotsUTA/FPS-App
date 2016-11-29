@@ -67,7 +67,7 @@ span.line {
     padding: 0 0 279px;
 }
 
-.no-padding{
+.no-padding {
     padding: 0px;
 }
 
@@ -76,20 +76,38 @@ span.line {
     background-image: url('../img/footerBackground.jpg');
     border-bottom: 40px solid #0e304b;
     text-shadow: none;
-    color:white;
-     padding: 3rem 1rem 1rem 1rem;
+    color: white;
+    padding: 3rem 1rem 1rem 1rem;
 }
 
-p{
+#Park1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 68%;
+    left: 34.85%;
+    z-index: 999;
+    opacity: 0.8;
+}
+
+p {
     font-size: 18px;
     line-height: 20px;
 }
 
-@media (max-width: 991px) {   
-    #footer{
+@media (max-width: 710px) {
+    #Park1 {
+        top: 64%;
+        left: 11.5%;
+    }
+}
+
+@media (max-width: 991px) {
+    #footer {
         font-size: 17px;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -97,40 +115,40 @@ p{
         background-size: cover;
     }
 
-        h1 {
+    h1 {
         font-size: 25px;
     }
-    
-    #footer{
+
+    #footer {
         font-size: 15px;
     }
 
-    #footer img{
-        width: 18%;
-    }
+        #footer img {
+            width: 18%;
+        }
 
-    #footer-links{
+    #footer-links {
         clear: both;
-        padding:1rem;
+        padding: 1rem;
         text-align: center;
     }
 
-    #second-box{
+    #second-box {
         text-align: right;
     }
-
 }
 
 
 @media (max-width: 464px) {
     html, body {
-         font-size: 99%;
+        font-size: 99%;
     }
 
-    #footer-links{
-        padding:2rem 1rem 1rem 1rem;
+    #footer-links {
+        padding: 2rem 1rem 1rem 1rem;
     }
-    #footer img{
+
+    #footer img {
         width: 28%;
     }
 }
