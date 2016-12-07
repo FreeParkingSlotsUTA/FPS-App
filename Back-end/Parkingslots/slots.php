@@ -26,18 +26,18 @@
 	
 	
 	$park1 = array(
-		'parkId' => row1[0],
-		'slots' => row1[1] - row1[2]
+		'parkId' => $row1[0],
+		'slots' => $row1[1] - $row1[2]
 	);
 
 	$park2 = array(
-		'parkId' => row2[0],
-		'slots' => row2[1] - row2[2]
+		'parkId' => $row2[0],
+		'slots' => $row2[1] - $row2[2]
 	);
 
 	$park3 = array(
-		'parkId' => row3[0],
-		'slots' => row3[1] - row3[2]
+		'parkId' => $row3[0],
+		'slots' => $row3[1] - $row3[2]
 	);
 
 
