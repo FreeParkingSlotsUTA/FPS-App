@@ -1,4 +1,6 @@
 import os
+import glob
+import psycopg2
 from SimpleCV import *
 
 #Settings
@@ -7,9 +9,19 @@ from SimpleCV import *
 
 #Program
 
-# First should get the latest picture! Now you have to change the picture manually.
 
-parkingAreaPic = Image("pics/slots_full.png").scale(1000,650)
+### DB connection
+conn = psycopg2.connect("dbname=test2 user=ni????? password=an??????")
+# Open a cursor to perform database operations
+cur = conn.cursor()
+cur.execute("SELECT * FROM parkingarea")
+print ("Testing database connections: " + str(cur.fetchone()))
+
+
+# First gets the latest picture!
+newest = max(glob.iglob('pics/*.[Pp][Nn][Gg]'), key=os.path.getctime)
+
+parkingAreaPic = Image(newest).scale(1000,650)
 parkingAreaPic.show()
 os.system('pause')
 
@@ -40,4 +52,11 @@ for slot in slotpxvalues:
 print('# of slots occupied = ' + str(countOfCars))
 	
 # Send the amount of cars to the database?
+cur.execute("UPDATE parkingarea SET pslotstaken = %s WHERE pareaid = 1;", str(countOfCars))
+cur.execute("SELECT pslotstaken FROM parkingarea")
+print (cur.fetchone())
+conn.commit()
 
+# Closing DB connection
+cur.close()
+conn.close()
