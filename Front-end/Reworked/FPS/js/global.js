@@ -1,6 +1,6 @@
 var windowSize;
 
-function refresh() {
+function refresh(id) {
     setTimeout(function () {
         windowHeight = $(window).height();
         windowWidth = $(window).width();
@@ -19,7 +19,12 @@ function refresh() {
             $('#responsivePic').height(windowHeight);
             console.log("daugiau");
         }
+        $("#Park" + id).css("opacity", "1");
+        $("#Park" + id).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
+                        .fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
     }, 20);
+
+   
 }
 
 function updateClock() {

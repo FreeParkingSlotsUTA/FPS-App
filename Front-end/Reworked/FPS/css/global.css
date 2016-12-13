@@ -89,7 +89,56 @@ span.line {
     top: 68%;
     left: 34.85%;
     z-index: 999;
-    opacity: 0.8;
+    opacity: 0.7;
+}
+
+#Park2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 55%;
+    left: 57%;
+    z-index: 999;
+    opacity: 0.7;
+}
+
+#Park3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 80%;
+    left: 52%;
+    z-index: 999;
+    opacity: 0.7;
+}
+
+#Park4 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 42%;
+    left: 58%;
+    z-index: 999;
+    opacity: 0.7;
+}
+
+#Park5 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 61%;
+    left: 43%;
+    z-index: 999;
+    opacity: 0.7;
+
 }
 
 p {
@@ -101,6 +150,31 @@ p {
     #Park1 {
         top: 64%;
         left: 11.5%;
+        font-size: xx-large;
+    }
+
+    #Park2 {
+        top: 48%;
+        left: 69%;
+        font-size: xx-large;
+    }
+
+    #Park3 {
+        top: 76%;
+        left: 56%;
+        font-size: xx-large;
+    }
+
+    #Park4 {
+        top: 33%;
+        left: 73%;
+        font-size: xx-large;
+    }
+
+    #Park5 {
+        top: 61%;
+        left: 38%;
+        font-size: xx-large;
     }
 }
 

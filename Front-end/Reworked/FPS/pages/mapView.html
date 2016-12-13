@@ -2,12 +2,17 @@
     <img id="responsivePic" style="" src="/img/narrowMap.png" />
     <div>
         <div ng-repeat="park in parking | orderBy: 'ParkID' ">
-            <div ng-if="park.slots >= 1" id="Park{{park.parkID}}" style="background-color: green;">
+            <div ng-if="park.slots >= 6" id="Park{{park.parkID}}" style="background-color: green;">
                 <div class="absolute-center">
                     {{park.slots}}
                 </div>
             </div>
-            <div ng-if="park.slots <= 0" id="Park{{park.parkID}}" style="background-color: red">
+            <div ng-if="park.slots <= 1" id="Park{{park.parkID}}" style="background-color: red">
+                <div class="absolute-center">
+                    {{park.slots}}
+                </div>
+            </div>
+            <div ng-if="park.slots >= 1 && park.slots <= 5" id="Park{{park.parkID}}" style="background-color: yellow;">
                 <div class="absolute-center">
                     {{park.slots}}
                 </div>
