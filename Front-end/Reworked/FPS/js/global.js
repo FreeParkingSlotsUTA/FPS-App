@@ -8,13 +8,13 @@ function refresh(id) {
         console.log(windowWidth);
 
         if (windowWidth < 710) {
-            $("#responsivePic").attr("src", "/img/narrowMap.png");
+            $("#responsivePic").attr("src", "./img/narrowMap.png");
             $('#responsivePic').width(windowWidth);
             $('#responsivePic').height(windowHeight);
             console.log("maziau");
         }
         else {
-            $("#responsivePic").attr("src", "/img/wideMap.png");
+            $("#responsivePic").attr("src", "./img/wideMap.png");
             $('#responsivePic').width(windowWidth);
             $('#responsivePic').height(windowHeight);
             console.log("daugiau");
@@ -100,13 +100,13 @@ $(document).ready(function(){
     console.log(windowWidth);
 
     if (windowWidth < 710) {
-        $("#responsivePic").attr("src", "/img/narrowMap.png");
+        $("#responsivePic").attr("src", "./img/narrowMap.png");
         $('#responsivePic').width(windowWidth);
         $('#responsivePic').height(windowHeight);
         console.log("maziau");
     }
     else {
-        $("#responsivePic").attr("src", "/img/wideMap.png");
+        $("#responsivePic").attr("src", "./img/wideMap.png");
         $('#responsivePic').width(windowWidth);
         $('#responsivePic').height(windowHeight);
         console.log("daugiau");
@@ -119,13 +119,13 @@ $(document).ready(function(){
             console.log(windowWidth);
 
             if (windowWidth < 710) {
-                $("#responsivePic").attr("src", "/img/narrowMap.png");
+                $("#responsivePic").attr("src", "./img/narrowMap.png");
                 $('#responsivePic').width(windowWidth);
                 $('#responsivePic').height(windowHeight);
                 console.log("maziau");
             }
             else {
-                $("#responsivePic").attr("src", "/img/wideMap.png");
+                $("#responsivePic").attr("src", "./img/wideMap.png");
                 $('#responsivePic').width(windowWidth);
                 $('#responsivePic').height(windowHeight);
                 console.log("daugiau");

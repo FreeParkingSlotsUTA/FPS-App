@@ -1,5 +1,5 @@
 <div id="MapsView" style="text-align:center;">
-    <img id="responsivePic" style="" src="/img/narrowMap.png" />
+    <img id="responsivePic" style="" src="./img/narrowMap.png" />
     <div>
         <div ng-repeat="park in parking | orderBy: 'ParkID' ">
             <div ng-if="park.slots >= 6" id="Park{{park.parkID}}" style="background-color: green;">

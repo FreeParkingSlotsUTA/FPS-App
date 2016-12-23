@@ -9,7 +9,7 @@ $db_usernamepasswd=pg_fetch_row($ret,0);
 if(($username==$db_usernamepasswd[0])&&($passwd==$db_usernamepasswd[1])){
 	session_start(); 
 	$_SESSION['islogin'] = true;
-	echo '<meta http-equiv="refresh" content="0;url=http://localhost/xampp/Admin_panel/Index.php"/>';
+	echo '<meta http-equiv="refresh" content="0;url=../Admin_panel/Index.php"/>';
 }else{
 	echo "<script language=javascript>alert('The username or the password you entered was incorrect!');history.back();</script>";
 }

@@ -2,7 +2,7 @@
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 session_start();
 if(!$_SESSION['islogin']){
-	echo '<meta http-equiv="refresh" content="0;url=http://localhost/xampp/Admin_panel/login.html"/>';exit;
+	echo '<meta http-equiv="refresh" content="0;url=../Admin_panel/login.html"/>';exit;
 }
 ?>
 <!DOCTYPE html>
@@ -26,12 +26,12 @@ if(!$_SESSION['islogin']){
             <li class="dropdown">
                 <a class="dropdown-toggle mymsg" data-toggle="dropdown" href="#"><img src="./images/32/166.png" />&nbsp;&nbsp;Personal Data<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="/xampp/Admin_panel/ChangePassword.html" target="show">Change Password</a></li>
+                    <li><a href="../Admin_panel/ChangePassword.html" target="show">Change Password</a></li>
                 </ul>
 
             </li>
             <li>
-                <a class="loginout" href="/xampp/Admin_panel/login.html" <?php session_unset();session_destroy();?>><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
+                <a class="loginout" href="../Admin_panel/login.html" <?php session_unset();session_destroy();?>><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
             </li>
 
         </ul>
@@ -46,7 +46,7 @@ if(!$_SESSION['islogin']){
             <li>
                 <img src="./images/32/5025_networking.png" />
             </li>
-            <li><a href="/xampp/Admin_panel/Index2.php" target="show">Front page</a> <span class="divider">>></span></li>
+            <li><a href="../Admin_panel/Index2.php" target="show">Front page</a> <span class="divider">>></span></li>
             <li class="active"></li>
         </ul>
     </div>

@@ -29,11 +29,12 @@ scotchApp.config(function ($routeProvider) {
 
 // create the controller and inject Angular's $scope
 scotchApp.controller('mainController', function ($scope, $http) {
-    $http.get('../dummy.json').
+    $http.get('http://localhost:8080/FPS-App/Back-end/Parkingslots/slots.php').
        success(function (data, status, headers, config) {
            $scope.parking = data;
        }).
        error(function (data, status, headers, config) {
+          console.log(data);
        });
 });
 
