@@ -2,23 +2,7 @@ var windowSize;
 
 function refresh(id) {
     setTimeout(function () {
-        windowHeight = $(window).height();
-        windowWidth = $(window).width();
-        console.log(windowHeight);
-        console.log(windowWidth);
-
-        if (windowWidth < 710) {
-            $("#responsivePic").attr("src", "./img/narrowMap.png");
-            $('#responsivePic').width(windowWidth);
-            $('#responsivePic').height(windowHeight);
-            console.log("maziau");
-        }
-        else {
-            $("#responsivePic").attr("src", "./img/wideMap.png");
-            $('#responsivePic').width(windowWidth);
-            $('#responsivePic').height(windowHeight);
-            console.log("daugiau");
-        }
+       
         $("#Park" + id).css("opacity", "1");
         $("#Park" + id).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
                         .fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
@@ -94,43 +78,7 @@ $(document).ready(function () {
 
 $(document).ready(function(){
     updateClock();
-    windowHeight = $(window).height();
-    windowWidth = $(window).width();
-    console.log(windowHeight);
-    console.log(windowWidth);
-
-    if (windowWidth < 710) {
-        $("#responsivePic").attr("src", "./img/narrowMap.png");
-        $('#responsivePic').width(windowWidth);
-        $('#responsivePic').height(windowHeight);
-        console.log("maziau");
-    }
-    else {
-        $("#responsivePic").attr("src", "./img/wideMap.png");
-        $('#responsivePic').width(windowWidth);
-        $('#responsivePic').height(windowHeight);
-        console.log("daugiau");
-    }
-    $('.glyphicon-map-marker, #mapView').click(function () {
-        setTimeout(function () {
-            windowHeight = $(window).height();
-            windowWidth = $(window).width();
-            console.log(windowHeight);
-            console.log(windowWidth);
-
-            if (windowWidth < 710) {
-                $("#responsivePic").attr("src", "./img/narrowMap.png");
-                $('#responsivePic').width(windowWidth);
-                $('#responsivePic').height(windowHeight);
-                console.log("maziau");
-            }
-            else {
-                $("#responsivePic").attr("src", "./img/wideMap.png");
-                $('#responsivePic').width(windowWidth);
-                $('#responsivePic').height(windowHeight);
-                console.log("daugiau");
-            }
-        }, 20);
-    });
+   
+   
 });
 

@@ -20,7 +20,7 @@ scotchApp.config(function ($routeProvider) {
 
         .when('/mapView', {
             templateUrl: 'pages/mapView.html',
-            controller: 'aboutController'
+            controller: 'mapController'
         })
 
         .otherwise({ redirectTo: '/' });
@@ -28,7 +28,11 @@ scotchApp.config(function ($routeProvider) {
 });
 
 // create the controller and inject Angular's $scope
-scotchApp.controller('mainController', function ($scope, $http) {
+scotchApp.controller('mainController', function ($scope, $http, $rootScope) {
+
+    $rootScope.hideFooter = false;
+    $rootScope.className = "default";
+
     $http.get('http://localhost:8080/FPS-App/Back-end/Parkingslots/slots.php').
        success(function (data, status, headers, config) {
            $scope.parking = data;
@@ -38,12 +42,34 @@ scotchApp.controller('mainController', function ($scope, $http) {
        });
 });
 
-scotchApp.controller('aboutController', function ($scope) {
+scotchApp.controller('aboutController', function ($scope, $rootScope) {
     $scope.message = 'Look! I am an about page.';
+    $rootScope.hideFooter = false;
+    $rootScope.className = "default";
 });
 
-scotchApp.controller('contactController', function ($scope) {
+scotchApp.controller('mapController', function ($scope, $rootScope) {
+    $rootScope.hideFooter = true;
+    $rootScope.className = "map";
+
+    $scope.getClass = function(number){
+
+      if(number == 0){
+        return "red";
+      }else if (number < 6){
+        return "yellow";
+      }else{
+        return "green";
+      }
+
+    }
+});
+
+scotchApp.controller('contactController', function ($scope, $rootScope) {
     $scope.message = 'Contact us! JK. This is just a demo.';
+
+    $rootScope.hideFooter = false;
+    $rootScope.className = "default";
 });
 
 scotchApp.factory('httpErrorResponseInterceptor', ['$q', '$location',

@@ -21,8 +21,8 @@
 </head>
 
 <body ng-controller="mainController">
-    <div id="wrap">
-        <nav class="navbar navbar-default">
+    <div id="wrap" ng-class="className">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -63,7 +63,7 @@
 
         <div id="push"></div>
     </div>
-    <div class="container no-padding">
+    <div class="container no-padding" ng-hide="hideFooter">
         <div id="footer">
             <div class="col-xs-6 col-sm-3 col-md-5 col-lg-5 padding-footer">
                 <p>Tampereen yliopisto<br> 03 355 111<br> kirjaamo @ uta.fi</p>
