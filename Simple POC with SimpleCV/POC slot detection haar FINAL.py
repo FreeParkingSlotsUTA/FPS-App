@@ -1,7 +1,6 @@
 import os
 import glob
 import simplejson as json
-import psycopg2
 import requests
 import time
 from SimpleCV import *
@@ -45,19 +44,21 @@ def countAndSendMatches():
 		parkingAreaPic = Image(newest).scale(1000,650) # 
 		parkingAreaPic = parkingAreaPic.grayscale()
 		
-		if showpics:
+		if showpics: #if showpics is set to True
 			parkingAreaPic.show() 
 			os.system('pause')
 	
-		
+		# find haar features
 		cars = parkingAreaPic.findHaarFeatures(haarfile, scale_factor = 1.02, min_neighbors = 9, use_canny = True, min_size = (40, 40))
 		#cars = parkingAreaPic.findHaarFeatures(haarfile, scale_factor = 1.05, min_neighbors = 9, use_canny = True)
 
 		cars = cars.filter((cars.y() < 480) | (cars.y() > 540))
 		#cars = cars.filter((cars.area() > 2100) & (cars.area() < 8000))
+		
+		# counts the found haar features
 		matches = len(cars) #amount of cars found
 
-		if showpics:
+		if showpics: #if showpics is set to True
 			cars.draw(width = 3)
 			parkingAreaPic.show()
 			for c in cars:
@@ -66,7 +67,7 @@ def countAndSendMatches():
 			os.system('pause')
 		
 	
-		# matches and parkid as json and posting
+		# matches and parkid as json and posting json
 		cars_amount = {"cars": matches, "parkId": parkid}
 		carsjson = json.dumps(cars_amount)
 		print carsjson #uncomment to print json
@@ -75,9 +76,13 @@ def countAndSendMatches():
 	print "Waiting for " + str(sleepTime) + " seconds until next image processing! Hit Ctrl-c/Ctrl-Break to abort!"
 	time.sleep(sleepTime)
 
-try:
-	print "Hit Ctrl-c/Ctrl-Break to abort"
-	while True:
-		countAndSendMatches()
-except KeyboardInterrupt:
-	pass
+def main():	
+	try:
+		print "Hit Ctrl-c/Ctrl-Break to abort"
+		while True:
+			countAndSendMatches()
+	except KeyboardInterrupt:
+		pass
+
+if __name__ == "__main__":
+    main()
