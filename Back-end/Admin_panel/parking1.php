@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 $conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
 $ret=pg_query($conn, "SELECT * FROM parkingslots ORDER BY parkingid ASC");
