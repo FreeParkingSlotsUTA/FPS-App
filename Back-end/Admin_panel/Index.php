@@ -67,7 +67,7 @@ if(!$_SESSION['islogin']){
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
                             <div class="accordion-inner"><a href="parking1.php" target="show">
-                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking1</span>
+                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking</span>
                             </div>
                             <div class="accordion-inner"><a href="parking2.php" target="show">
                                 <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking2</span>

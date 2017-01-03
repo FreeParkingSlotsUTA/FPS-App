@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
-$conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
+include '../conn.php';
 $ret=pg_query($conn, "SELECT * FROM parkingslots");
 
 $entrance1new=$_POST['entrance1new'];

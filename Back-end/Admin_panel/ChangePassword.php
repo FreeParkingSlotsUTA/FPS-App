@@ -3,7 +3,7 @@ error_reporting(E_ALL^E_NOTICE^E_WARNING);
 $passwdold=md5($_POST['passwdold']);
 $passwdnew=md5($_POST['passwdnew']);
 $passwdnewagain=md5($_POST['passwdnewagain']);
-$conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
+include '../conn.php';
 $ret=pg_query($conn, "SELECT * FROM passwd");
 $db_usernamepasswd=pg_fetch_row($ret,0);
 

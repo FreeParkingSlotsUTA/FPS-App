@@ -1,20 +1,20 @@
 <?php
 session_start();
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
-$conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
+include '../conn.php';
 $ret=pg_query($conn, "SELECT * FROM parkingslots ORDER BY parkingid ASC");
-$db_parkingslots=pg_fetch_row($ret,0);
-
+// Table inside a loop, should generate all the parkingslots
+// Need to test, may have to make another table with just the titles so they don't get repeated.
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Parking1</title>
+<title>Parking</title>
 </head>
 <body style="background-image: url('./images/bg.jpg'); background-size:cover">
-<h2 align="center" style="font-family: verdana,arial,sans-serif;">Parking1</h2>
+<h2 align="center" style="font-family: verdana,arial,sans-serif;">Parking</h2>
 
 <style type="text/css">
 .mod{
@@ -119,6 +119,11 @@ function hide(tag){
 }
 </script>
 
+<?php
+	$i = 0;
+	for($db_parkingslots = pg_fetch_row($ret,$i)) {
+		?>
+
 	<table width="80%" border="1" align="center" class="imagetable">
 		<tr>
 			<th>Parking ID</th>
@@ -182,6 +187,7 @@ function hide(tag){
 				</div>
 		</tr>
 	</table>
+	<?php $i++; } ?>
 
 	<div id="fade" class="black_overlay"></div>
 	

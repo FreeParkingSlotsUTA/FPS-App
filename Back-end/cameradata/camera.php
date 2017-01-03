@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
-$conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
+include '../conn.php';
 //camera1,camera2,camera3 are array ('parkid','freeslots') like ('1','20')
 
 $camera1data=$_POST['camera1'];
