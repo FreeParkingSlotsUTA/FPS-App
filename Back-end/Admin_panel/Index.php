@@ -31,7 +31,7 @@ if(!$_SESSION['islogin']){
 
             </li>
             <li>
-                <a class="loginout" href="../Admin_panel/login.html" <?php session_unset();session_destroy();?>><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
+                <a class="loginout" href="../Admin_panel/logout.php"><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
             </li>
 
         </ul>
