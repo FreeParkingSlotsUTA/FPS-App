@@ -4,10 +4,11 @@ include '../conn.php';
 $ret=pg_query($conn, "SELECT * FROM parkingslots");
 
 $entrance1new=$_POST['entrance1new'];
+$entranceId=$_POST['id'];
 
-	if(is_numeric($entrance1new)==true){
+	if(is_numeric($entrance1new)==true && $_POST['id']){
     	$sql=<<<EOF
-    UPDATE parkingslots SET entrance = '$entrance1new' where parkingid=1;
+    UPDATE parkingslots SET entrance = '$entrance1new' where parkingid='$entranceId';
 EOF;
     	$ret = pg_query($conn, $sql);
     	if(!$ret){

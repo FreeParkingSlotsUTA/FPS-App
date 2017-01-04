@@ -3,8 +3,8 @@ session_start();
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 include '../conn.php';
 $ret=pg_query($conn, "SELECT * FROM parkingslots ORDER BY parkingid ASC");
-// Table inside a loop, should generate all the parkingslots
-// Need to test, may have to make another table with just the titles so they don't get repeated.
+// Table inside a loop, should generate all the parkingslots... tested, works
+// Buttons only change the value of the first row, not solved yet
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -121,7 +121,7 @@ function hide(tag){
 
 <?php
 	$i = 0;
-	for($db_parkingslots = pg_fetch_row($ret,$i)) {
+	while($db_parkingslots = pg_fetch_array($ret,$i, PGSQL_BOTH)) {
 		?>
 
 	<table width="80%" border="1" align="center" class="imagetable">
@@ -146,6 +146,7 @@ function hide(tag){
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1entrance.php' method="post"> 
+								<input type="hidden" name="id" value="<?php echo $db_parkingslots["parkingid"]; ?>"/>
 			      					Number of Entrance:
 			       					<input name="entrance1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
