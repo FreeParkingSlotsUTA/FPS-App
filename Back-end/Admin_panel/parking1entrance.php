@@ -1,14 +1,15 @@
 <?php
+session_start();
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 include '../conn.php';
 $ret=pg_query($conn, "SELECT * FROM parkingslots");
 
 $entrance1new=$_POST['entrance1new'];
-$entranceId=$_POST['id'];
+$id=$_POST['id'];
 
 	if(is_numeric($entrance1new)==true && $_POST['id']){
     	$sql=<<<EOF
-    UPDATE parkingslots SET entrance = '$entrance1new' where parkingid='$entranceId';
+    UPDATE parkingslots SET entrance = '$entrance1new' where parkingid='$id';
 EOF;
     	$ret = pg_query($conn, $sql);
     	if(!$ret){

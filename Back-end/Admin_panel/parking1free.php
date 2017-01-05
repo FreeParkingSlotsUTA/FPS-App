@@ -5,10 +5,11 @@ $ret=pg_query($conn, "SELECT * FROM parkingslots");
 
 
 $free1new=$_POST['free1new'];
+$id=$_POST['id'];
 
 if(is_numeric($free1new)==true){
 	$sql=<<<EOF
-    UPDATE parkingslots SET freeslots = '$free1new' where parkingid=1;
+    UPDATE parkingslots SET freeslots = '$free1new' where parkingid='$id';
 EOF;
 	$ret = pg_query($conn, $sql);
 	if(!$ret){

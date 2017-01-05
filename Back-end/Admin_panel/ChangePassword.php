@@ -9,7 +9,7 @@ $db_usernamepasswd=pg_fetch_row($ret,0);
 
 if($passwdold==$db_usernamepasswd[1]){
     if(($passwdnew!=md5(''))&&($passwdnewagain!=md5(''))){
-		if(!preg_match("/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:\"\<\>,\.\?\\\ ]/", $passwdnew > 0) {
+		if(!preg_match("/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:\"\<\>,\.\?\\\ ]/", $passwdnew)) {
 					
 			if($passwdnew==$passwdnewagain){
 			$sql=<<<EOF

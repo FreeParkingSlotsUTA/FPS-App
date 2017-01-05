@@ -119,10 +119,7 @@ function hide(tag){
 }
 </script>
 
-<?php
-	$i = 0;
-	while($db_parkingslots = pg_fetch_array($ret,$i, PGSQL_BOTH)) {
-		?>
+
 
 	<table width="80%" border="1" align="center" class="imagetable">
 		<tr>
@@ -132,6 +129,10 @@ function hide(tag){
 			<th>Total Slots</th>
 			<th>Free Slots</th>
 		</tr>
+	<?php
+		$i = 0;
+		while($db_parkingslots = pg_fetch_array($ret,$i, PGSQL_BOTH)) {
+			?>
 		<tr>
 			<td><?php echo $db_parkingslots[0];?></td>
 			<td><?php echo $db_parkingslots[1];?></td>
@@ -139,18 +140,22 @@ function hide(tag){
 			<td><?php echo $db_parkingslots[3];?></td>
 			<td><?php echo $db_parkingslots[4];?></td>
 		</tr>
+	<?php $i++; } ?>
 		<tr>
 			<th></th>
-			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light')"></th>
+			<th><input value="Modify " style="width:50%;" type="button" class="mod" href="javascript:void(0)" onclick="show('light')"></th>
 				<div id="light" class="white_content">
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
-	      					<form action='parking1entrance.php' method="post"> 
-								<input type="hidden" name="id" value="<?php echo $db_parkingslots["parkingid"]; ?>"/>
-			      					Number of Entrance:
-			       					<input name="entrance1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
-								<input value="CONFIRM " type="submit" class="mod">
-							</form>							
+							
+								<form action='parking1entrance.php' method="post">
+										Id of the parkingslot:
+									<input type="text" name="id" placeholder="input parkingslot id" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
+										Number of Entrance:
+									<input name="entrance1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
+									<input value="CONFIRM " type="submit" class="mod">
+								</form>
+							
 	     				</div>
 				</div>
 			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light2')"></th>
@@ -158,8 +163,10 @@ function hide(tag){
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light2')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1exit.php' method="post"> 
+									Id of the parkingslot:
+									<input type="text" name="id" placeholder="input parkingslot id" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
 			      					Number of Exit:
-			       					<input name="exit1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+			       					<input name="exit1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
@@ -169,8 +176,10 @@ function hide(tag){
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light3')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1total.php' method="post"> 
+									Id of the parkingslot:
+									<input type="text" name="id" placeholder="input parkingslot id" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
 			      					Total slots:
-			       					<input name="total1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+			       					<input name="total1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
@@ -180,15 +189,17 @@ function hide(tag){
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light4')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
 	      					<form action='parking1free.php' method="post"> 
+									Id of the parkingslot:
+									<input type="text" name="id" placeholder="input parkingslot id" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
 			      					Free Slots:
-			       					<input name="free1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+			       					<input name="free1new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" /><br>
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
 				</div>
 		</tr>
 	</table>
-	<?php $i++; } ?>
+
 
 	<div id="fade" class="black_overlay"></div>
 	
