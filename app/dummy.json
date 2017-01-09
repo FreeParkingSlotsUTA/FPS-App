@@ -1,7 +1,7 @@
 [
   {
     "parkID": "1",
-    "slots": "8"
+    "slots": "5"
   },
   {
     "parkID": "2",
@@ -9,7 +9,7 @@
   },
   {
     "parkID": "3",
-    "slots": "14"
+    "slots": "0"
   },
   {
     "parkID": "4",
@@ -17,6 +17,6 @@
   },
   {
     "parkID": "5",
-    "slots": "6"
+    "slots": "0"
   }
 ]

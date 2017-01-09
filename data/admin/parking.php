@@ -1,9 +1,20 @@
 <?php
+
+include '../conn.php';
+
+$id = 1;
+
+$possibleIds = [1,2,3,4,5];
+
+if(isset($_GET["id"]) && in_array($_GET["id"], $possibleIds)){
+	$id = $_GET["id"];
+}
+
 session_start();
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
-$conn = pg_connect("host=localhost port=5432 dbname=db_admin user=postgres password=anan007");
-$ret=pg_query($conn, "SELECT * FROM parkingslots ORDER BY parkingid ASC");
-$db_parkingslots=pg_fetch_row($ret,2);
+
+$ret=pg_query($conn, "SELECT * FROM parkingslots WHERE parkingid = ".$id);
+$db_parkingslots=pg_fetch_row($ret,0);
 
 ?>
 
@@ -11,10 +22,10 @@ $db_parkingslots=pg_fetch_row($ret,2);
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Parking3</title>
+<title>Parking - <?= $db_parkingslots[5] ?></title>
 </head>
 <body style="background-image: url('./images/bg.jpg'); background-size:cover">
-<h2 align="center" style="font-family: verdana,arial,sans-serif;">Parking3</h2>
+<h2 align="center" style="font-family: verdana,arial,sans-serif;"><?= $db_parkingslots[5] ?></h2>
 <style type="text/css">
 .mod{
 	background:#00BFFF;
@@ -117,63 +128,88 @@ function hide(tag){
 }
 </script>
 
-	<table width="80%" border="1" align="center" class="imagetable">
+	<table width="90%" border="1" align="center" class="imagetable">
 		<tr>
-			<th>Parking ID</th>
-			<th>Number of Entrance</th>
-			<th>Number of Exit</th>
+			<th>Park ID</th>
+			<th>Name</th>
+			<th>Entrance</th>
+			<th>Exit</th>
 			<th>Total Slots</th>
-			<th>Free Slots</th>
+			<th>Used Slots</th>
 		</tr>
 		<tr>
 			<td><?php echo $db_parkingslots[0];?></td>
+			<td><?php echo $db_parkingslots[5];?></td>
 			<td><?php echo $db_parkingslots[1];?></td>
 			<td><?php echo $db_parkingslots[2];?></td>
 			<td><?php echo $db_parkingslots[3];?></td>
 			<td><?php echo $db_parkingslots[4];?></td>
 		</tr>
 		<tr>
-			<th></th>
-			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light')"></th>
+			<th>
+				
+			</th>
+			<th>
+				<input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light')">
+			</th>
 				<div id="light" class="white_content">
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
-	      					<form action='parking3entrance.php' method="post"> 
-			      					Number of Entrance:
-			       					<input name="entrance3new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+	      					<form action='parkingname.php?id=<?= $db_parkingslots[0] ?>' method="post"> 
+			      					Park Name:
+			       					<input name="namenew" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>							
 	     				</div>
 				</div>
-			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light2')"></th>
+			<th>
+				<input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light')">
+			</th>
+				<div id="light" class="white_content">
+	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light')"><img src="./images/32/103.png"></a></div>
+	      				<div class="con">
+	      					<form action='parkingentrance.php?id=<?= $db_parkingslots[0] ?>' method="post"> 
+			      					Number of Entrance:
+			       					<input name="entrancenew" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+								<input value="CONFIRM " type="submit" class="mod">
+							</form>							
+	     				</div>
+				</div>
+			<th>
+				<input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light2')">
+			</th>
 				<div id="light2" class="white_content">
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light2')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
-	      					<form action='parking3exit.php' method="post"> 
+	      					<form action='parkingexit.php?id=<?= $db_parkingslots[0] ?>' method="post"> 
 			      					Number of Exit:
-			       					<input name="exit3new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+			       					<input name="exitnew" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
 				</div>
-			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light3')"></th>
+			<th>
+				<input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light3')">
+			</th>
 				<div id="light3" class="white_content">
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light3')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
-	      					<form action='parking3total.php' method="post"> 
+	      					<form action='parkingtotal.php?id=<?= $db_parkingslots[0] ?>' method="post"> 
 			      					Total slots:
-			       					<input name="total3new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+			       					<input name="totalnew" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>
 				</div>
-			<th><input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light4')"></th>
+			<th>
+				<input value="Modify " style="width:50%;" type="submit" class="mod" href="javascript:void(0)" onclick="show('light4')">
+			</th>
 				<div id="light4" class="white_content">
 	      			<div class="close"><a href="javascript:void(0)" onclick="hide('light4')"><img src="./images/32/103.png"></a></div>
 	      				<div class="con">
-	      					<form action='parking3free.php' method="post"> 
+	      					<form action='parkingfree.php?id=<?= $db_parkingslots[0] ?>' method="post"> 
 			      					Free Slots:
-			       					<input name="free3new" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
+			       					<input name="freenew" placeholder="input new data" type="text" class="bk" onmouseout="this.className='bk'" onmousemove="this.className='bk1'" />
 								<input value="CONFIRM " type="submit" class="mod">
 							</form>
 	     				</div>

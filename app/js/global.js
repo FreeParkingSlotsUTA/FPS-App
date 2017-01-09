@@ -3,13 +3,13 @@ var windowSize;
 function refresh(id) {
     setTimeout(function () {
        
-        $("#Park" + id).css("opacity", "1");
         $("#Park" + id).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
                         .fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
     }, 20);
-
-   
 }
+
+
+
 
 function updateClock() {
     var currentTime = new Date();

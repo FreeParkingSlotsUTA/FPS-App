@@ -54,7 +54,7 @@ span.line {
 }
 
 .spacing {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .middle-logo-inline {
@@ -63,7 +63,7 @@ span.line {
 }
 
 .middle-logo {
-    padding: 0px 15px 15px 15px;
+    padding: 0px 15px 10px 15px;
 }
 
 
@@ -73,8 +73,8 @@ span.line {
 }
 
 #wrap.default{
-    margin: 0 auto -279px;
-    padding: 0 0 279px;
+    margin: 0 auto -150px;
+    padding: 0 0 150px;
 }
 
 .no-padding {
@@ -82,13 +82,44 @@ span.line {
 }
 
 #footer {
-    height: 279px;
+    height: 150px;
     background-image: url('../img/footerBackground.jpg');
     border-bottom: 40px solid #0e304b;
     text-shadow: none;
     color: white;
-    padding: 3rem 1rem 1rem 1rem;
+    padding:  1rem;
 }
+
+#footer .footer-text{
+    display: none;
+}
+
+.park-name{
+     z-index: 999;
+     position: absolute;
+     top:  60px;
+     left: 10px;
+     background: rgba(255, 255, 255, .7); 
+    padding: 5px;
+    border-radius: 5px;
+    border:  1px solid #CCCCCC;
+}
+
+.list-button{
+     z-index: 999;
+     position: absolute;
+     bottom: 15px;
+     left: 15px;
+    background: rgba(255, 255, 255, .7); 
+    padding: 5px;
+    border-radius: 5px;
+    border:  1px solid #CCCCCC;
+}
+
+.list-button a:hover{
+    text-decoration: none;
+}
+
 
 .park-sign{
     height: 50px;
@@ -98,18 +129,30 @@ span.line {
     opacity: 0.7;
     position: absolute;
     border:  1px solid #888888;
+    text-shadow: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.park-sign.selected{
+    opacity: 1;
+    border-width: 5px;
+    border-color: rgb(51, 122, 183); 
+    height: 50px;
+    width: 50px;
 }
 
 .park-sign.red{
-    background-color: red;
+    background-color: rgb(217, 83, 79);
 }
 
 .park-sign.yellow{
-    background-color: yellow;
+    background-color: rgb(240, 173, 78); 
 }
 
 .park-sign.green{
-    background-color: green;
+    background-color: rgb(92, 184, 92);
 }
 
 
@@ -126,6 +169,48 @@ p {
 }
 
 
+.sign{
+    padding: 3px 6px;
+    border-radius: 3px;
+    text-shadow: none;
+    color: #FFFFFF;
+}
+
+.sign-good{
+    background-color: rgb(92, 184, 92);
+}
+
+.sign-okay{
+    background-color: rgb(240, 173, 78);     
+}
+
+.sign-full{
+    background-color: rgb(217, 83, 79);
+}
+
+
+
+@media (min-width: 464px) {
+
+        #footer .footer-text{
+        display: inline-block;
+    }
+
+    #footer{
+        padding: 3rem 1rem 1rem 1rem;
+        height: 279px;
+    }
+
+    #wrap.default{
+    margin: 0 auto -279px;
+    padding: 0 0 279px;
+}
+
+    .spacing {
+        margin-bottom: 40px;
+    }
+
+}
 
 
 #MapsView{
@@ -221,7 +306,7 @@ p {
     }
 
     #footer-links {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 0.3rem 1rem 1rem 1rem;
     }
 
     #footer img {

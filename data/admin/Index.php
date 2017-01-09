@@ -2,8 +2,13 @@
 error_reporting(E_ALL^E_NOTICE^E_WARNING);
 session_start();
 if(!$_SESSION['islogin']){
-	echo '<meta http-equiv="refresh" content="0;url=../Admin_panel/login.html"/>';exit;
+	echo '<meta http-equiv="refresh" content="0;url=../admin/login.html"/>';exit;
 }
+
+include '../conn.php';
+
+$ret=pg_query($conn, "SELECT parkingid,name FROM parkingslots ORDER BY parkingid ASC");
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,12 +31,12 @@ if(!$_SESSION['islogin']){
             <li class="dropdown">
                 <a class="dropdown-toggle mymsg" data-toggle="dropdown" href="#"><img src="./images/32/166.png" />&nbsp;&nbsp;Personal Data<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../Admin_panel/ChangePassword.html" target="show">Change Password</a></li>
+                    <li><a href="../admin/ChangePassword.html" target="show">Change Password</a></li>
                 </ul>
 
             </li>
             <li>
-                <a class="loginout" href="../Admin_panel/logout.php"><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
+                <a class="loginout" href="../admin/logout.php"><img src="./images/32/200.png" />&nbsp;&nbsp;LOGOUT</a>
             </li>
 
         </ul>
@@ -66,18 +71,20 @@ if(!$_SESSION['islogin']){
                             </a>
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
-                            <div class="accordion-inner"><a href="parking1.php" target="show">
-                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking</span>
-                            </div>
-                            <div class="accordion-inner"><a href="parking2.php" target="show">
-                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking2</span>
-                            </div>
-                           
-                            <div class="accordion-inner"> <a href="parking3.php" target="show">
-                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> Parking3</span>
 
+
+                            <?php
+                                $i = 0;
+                                while($db_parkingslots = pg_fetch_array($ret,$i, PGSQL_BOTH)) {
+
+                                    $pid = $db_parkingslots[0];
+                                    $name = $db_parkingslots[1];
+                                    ?>
+                                 <div class="accordion-inner"><a href="parking.php?id=<?= $pid ?>" target="show">
+                                <img class="left-icon-child" src="./images/32/parking-signal.jpg" /><span class="left-body"> <?= $name ?></span>
                             </div>
-                        
+                            <?php $i++; } ?>
+
                         </div>
                     </div>
                 </div>

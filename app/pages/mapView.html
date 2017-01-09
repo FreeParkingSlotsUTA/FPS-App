@@ -1,11 +1,16 @@
 <div id="MapsView" style="text-align:center;">  
     <div>
         <div ng-repeat="park in parking | orderBy: 'ParkID' ">
-            <div id="Park{{park.parkID}}" ng-class="getClass(park.slots)" class="park-sign">
+            <div id="Park{{park.parkID}}" ng-class="getClass(park.slots,park.parkID)" class="park-sign" ng-click="select(park.parkID)" data-name="{{park.name}}">
                 <div class="absolute-center">
                     {{park.slots}}
                 </div>
             </div>
         </div>
+    </div>
+    <div class="list-button">
+    	<a href="#home">To List View</a>
+    </div>
+    <div class="park-name" ng-bind="name" ng-if="name">
     </div>
 </div>
