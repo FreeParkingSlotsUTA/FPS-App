@@ -51,7 +51,7 @@ $ret=pg_query($conn, "SELECT parkingid,name FROM parkingslots ORDER BY parkingid
             <li>
                 <img src="./images/32/5025_networking.png" />
             </li>
-            <li><a href="../Admin_panel/Index2.php" target="show">Front page</a> <span class="divider">>></span></li>
+            <li><a href="../admin/Index2.php" target="show">Front page</a> <span class="divider">>></span></li>
             <li class="active"></li>
         </ul>
     </div>
