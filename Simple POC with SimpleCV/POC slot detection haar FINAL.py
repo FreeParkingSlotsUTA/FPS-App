@@ -3,6 +3,7 @@ import glob
 import simplejson as json
 import requests
 import time
+import urllib2
 from SimpleCV import *
 
 """
@@ -29,6 +30,7 @@ parkidList = [1,2,3] #list of park ids
 sleepTime = 60 #set time interval to process images (in seconds)
 showpics = False #set to true if you want to see the processed images (for debugging...)
 posturl = "http://name.of.the.site" #Url to send json to
+posturl2 = "http://fpsapp.sis.uta.fi/data/input/index.php?p"
 
 #Program
 
@@ -66,13 +68,19 @@ def countAndSendMatches():
 			print "matches: " + str(matches)
 			os.system('pause')
 		
-	
+		"""
 		# matches and parkid as json and posting json
 		cars_amount = {"cars": matches, "parkId": parkid}
 		carsjson = json.dumps(cars_amount)
 		print carsjson #uncomment to print json
-		#post_cars = requests.post(url=posturl, data=carsjson) #uncomment to post json
-	
+		post_cars = requests.post(url=posturl, data=carsjson) #uncomment to post json
+		"""
+		# matches and parkid to server with urllib2 
+		urlToOpen = posturl2 + str(parkid) + "=" + str(matches)
+		print "Accessing: " + urlToOpen
+		openURL = urllib2.urlopen(urlToOpen)
+		openURL.close()
+			
 	print "Waiting for " + str(sleepTime) + " seconds until next image processing! Hit Ctrl-c/Ctrl-Break to abort!"
 	time.sleep(sleepTime)
 
